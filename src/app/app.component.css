@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+  }
+
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  #scoreSum{
+    display: inline;
+    margin-left: 100px;
+  }
+
+  .mat-raised-button{
+    width: 32.5%;
+  }
+
+  .button-row{
+    padding: 5px;
+  }
