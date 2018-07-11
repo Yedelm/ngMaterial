@@ -3,22 +3,22 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from '../shared/material.module';
-import { FormsModule } from '@angular/forms';
-import { AttributesTableComponent } from './attributes-table/attributes-table.component';
 
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: '', loadChildren: './attributes-table/attributes-table.module#AttributesTableModule'},
+  { path: '**', redirectTo: ''}
+];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AttributesTableComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    FormsModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
